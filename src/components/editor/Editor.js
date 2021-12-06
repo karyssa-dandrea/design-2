@@ -11,7 +11,12 @@ export default function Editor({
   setName,
   nameList,
   setNameList,
+  setPersonCount,
 }) {
+  const handlePersonCount = (e) => {
+    setPerson(e.target.value);
+    setPersonCount((prevState) => prevState + 1);
+  };
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -37,6 +42,19 @@ export default function Editor({
         <option value="house2">Cabin</option>
         <option value="house4">Mushroom #2</option>
       </select>
+      <div className="form-control"></div>
+      <label htmlFor="pet"> Pet</label>
+      <select value={pet}>
+        <option value="pet1">Kitty</option>
+        <option value="pet4">Frog</option>
+        <option value="pet3">Dragon</option>
+        <option value="pet2">Deer</option>
+      </select>
+
+      <div className="form-control"> </div>
+      <label htmlFor="name">Name Your Character!</label>
+      <input name="name" type="text" value={name} />
+      <button onClick={handleClick}>Add Name</button>
     </div>
   );
 }
