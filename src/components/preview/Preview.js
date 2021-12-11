@@ -7,9 +7,9 @@ export default function Preview({ person, house, pet, name, nameList }) {
       <img alt={house} height="150" src={`${process.env.PUBLIC_URL}/characters/${house}.png`} />
       <img alt={pet} height="150" src={`${process.env.PUBLIC_URL}/characters/${pet}.png`} />
       <div id="cottage">
-        {nameList.map((elem) => (
+        {/* {nameList.map((elem) => (
           <p key={elem}>{elem}</p>
-        ))}
+        ))} */}
       </div>
     </div>
   );
